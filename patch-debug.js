@@ -7,7 +7,7 @@ const candidates = [
 ];
 const target = 'Unable to find lambda for route: ${routeFileNoExt}';
 const replacement =
-  'Unable to find lambda for route: ${routeFileNoExt} :: LOOKUP_KEY=${JSON.stringify(outputSrcPathPage)} :: LAMBDA_KEYS=${JSON.stringify(Object.keys(lambdas))}';
+  'Unable to find lambda for route: ${routeFileNoExt} :: srcRoute=${JSON.stringify(srcRoute)} :: outputPathPageOrig=${JSON.stringify(outputPathPageOrig)} :: LAMBDA_KEYS=${JSON.stringify(Object.keys(lambdas))}';
 let patched = false;
 for (const f of candidates) {
   if (!fs.existsSync(f)) continue;
