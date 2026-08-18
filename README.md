@@ -1,4 +1,4 @@
-# NEXT_MISSING_LAMBDA Windows repro (case 01v2sUduDWZ2gRZU)
+# NEXT_MISSING_LAMBDA Windows repro
 
 Minimal Next.js 16.3.0 App Router project with one 2-segment static route
 (/prueba-plana/anidada). CI runs `npx vercel@58.9.4 build` on windows-latest
