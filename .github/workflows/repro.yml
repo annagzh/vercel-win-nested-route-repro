@@ -27,3 +27,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "ubuntu job doubles as the WSL-equivalent control (same Linux path semantics)"
+  windows-debug:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install
+      - run: npm install -D vercel@58.9.4
+      - run: node patch-debug.js
+      - name: vercel build (instrumented)
+        run: npx --no-install vercel build
+        continue-on-error: true
