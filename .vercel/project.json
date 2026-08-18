@@ -1,0 +1,12 @@
+{
+  "projectId": "prj_repro",
+  "orgId": "team_repro",
+  "settings": {
+    "framework": "nextjs",
+    "buildCommand": null,
+    "devCommand": null,
+    "installCommand": null,
+    "outputDirectory": null,
+    "nodeVersion": "20.x"
+  }
+}
